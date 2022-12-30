@@ -19,7 +19,7 @@ usage example :
 ```javascript
 
 
-import {ABPaginate} from "@abasb75/paginate/dist";
+import {ABPaginate} from "@abasb75/paginate";
 
 import { useState } from 'react';
 
