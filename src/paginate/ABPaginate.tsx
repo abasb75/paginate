@@ -56,18 +56,15 @@ class ABPaginate extends React.Component<Props,State>{
         disabledNextClassName:'ab-paginate-next-1324686',
         activeItemClassName:'ab-paginate-actv-5623876',
         breakClassName:'ab-paginate-brek-4343078',
-
         showNextPage:true,
         showPreviousPage:true,
         showFirstPage:true,
         showLastPage:true,
-
         nextPageLabel:'next >',
         previousPageLabel:'< previous',
         firstPageLabel:'<<',
         lastPageLabel:'>>',
         breakLabel:'...',
-
     }
 
     constructor(props:Props){
@@ -242,8 +239,6 @@ class ABPaginate extends React.Component<Props,State>{
             {this.last()}
         </ul>);
     }
-
-
 }
 
 
