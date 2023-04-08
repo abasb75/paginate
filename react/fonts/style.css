@@ -1,0 +1,12 @@
+@font-face {
+    font-family: Montserrat;
+    src: url('./montserrat-900.woff2');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('./merriweather.woff2');
+    font-weight: 400;
+}
+

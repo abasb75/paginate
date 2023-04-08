@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Merriweather;
+    outline: none;
+}
+
+h1,h2,h3,h4,h5,h6,b,bold,.bold{
+    font-family: Montserrat;
+}
+
+.holder{
+    width: 100%;
+    position: relative;
+    font-size: 0;
+    padding-left: 300px;
+}
+
+.holder .aside{
+    width: 300px;
+    font-size: 1rem;
+    background-color: #f1f1f1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    overflow: auto;
+}
+
+h1{
+    padding: 12px 12px;
+    font-size: 1.2rem;
+    line-height: 3;
+}
+
+.input{
+    width: 100%;
+    height: 60px;
+    padding: 0 12px;
+    margin-bottom: 20px;
+}
+.input label{
+    display: block;
+    height: 1rem;
+    font-size: .875rem;
+    line-height: .875rem;
+    margin-bottom: 10px;
+}
+
+.input input ,
+select{
+    width: 100%;
+    height: 30px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid #e9e9e9;
+    padding: 0 12px;
+    outline: none;
+}
+
+.input input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: top;
+}
+.input input[type=checkbox]+label{
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: top;
+    padding-left: 12px;
+}
+
+.main{
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.code{
+    width: 100%;
+    line-height: 50px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 50px;
+}
+
+.code button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    border: none;
+    color: #222;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.code button:hover{
+    cursor: pointer;
+    color: #00b6ce;
+}
+
+.code textarea{
+    background: none;
+    border: none;
+    height: 500px;
+    padding: 20px 0;
+    width: 100%;
+    line-height: 2;
+    font-size: 1rem;
+}
+
+.footer ul li{
+    display: inline-block;
+    height: 50px;
+    vertical-align: top;
+    margin-right: 20px;
+    line-height: 50px;
+    transform: .3s all;
+}
+
+
+.footer ul li a{
+    color: #333;
+    text-decoration: none;
+}
+
+.footer ul li i{
+    font-size: 1.2rem;
+    line-height: 50px;
+    
+}
+
+.footer ul li:nth-child(2) i{
+    font-size: 1.5rem;
+    line-height: 50px;
+}
+
+.footer ul li:nth-child(4) i{
+    font-size: 1.5rem;
+    line-height: 50px;
+}
+
+
+.footer ul li a:hover{
+    color: #197477;
+    transition: .3s all;
+    text-decoration: none;
+}

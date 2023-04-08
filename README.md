@@ -1,9 +1,4 @@
-<img src="capture.jpg" alt="@abasb75/paginate react js paginate" title="@abasb75/paginate">
-
-
-![react js paginate](capture.jpg)
-
-
+<img src="files/screen.gif" alt="@abasb75/paginate react js paginate" title="@abasb75/paginate">
 
 add to reactjs :
 
@@ -79,10 +74,14 @@ props :
 | showPreviousPage | `bool` |  | `true` |  |
 | showFirstPage | `bool` |  | `true` |  |
 | showLastPage | `bool` |  | `true` |  |
-| nextPageLabel | `string` |  | `'next >'` |  |
-| previousPageLabel | `string` |  | `'< previous'` |  |
+| nextPageLabel | `string` |  | `'>'` |  |
+| previousPageLabel | `string` |  | `'<'` |  |
 | firstPageLabel | `string` |  | `'<<'` |  |
 | lastPageLabel | `string` |  | `'>>'` |  |
 | breakLabel | `string` |  | `'...'` |  |
+| buttonRounded | `none` `normal` `quarter` `full` |  | `normal` |  |
+| buttonWidth | `number` |  | `42` |  |
+| buttonHeight | `buttonHeight` |  | `42` |  |
+
 
 <!-- props-table-end -->

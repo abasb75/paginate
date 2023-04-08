@@ -1,12 +1,22 @@
-import React from "react";
-import './ABPaginate.css';
-
+import React from 'react';
+import './paginate.css';
 
 interface Props {
     activePage:number;
     lastPage:number;
     pageRangeDisplayed:number;
     onChange:Function;
+    
+    showNextPage:boolean;
+    showPreviousPage:boolean;
+    showFirstPage:boolean;
+    showLastPage:boolean;
+    nextPageLabel:string;
+    previousPageLabel:string;
+    firstPageLabel:string;
+    lastPageLabel:string;
+    breakLabel:string;
+
     listClassName:string;
     itemClassName:string;
     nextClassName:string;
@@ -19,26 +29,20 @@ interface Props {
     disabledNextClassName:string;
     activeItemClassName:string;
     breakClassName:string;
-    showNextPage:boolean;
-    showPreviousPage:boolean;
-    showFirstPage:boolean;
-    showLastPage:boolean;
-    nextPageLabel:string;
-    previousPageLabel:string;
-    firstPageLabel:string;
-    lastPageLabel:string;
-    breakLabel:string;
-}
 
+    buttonRounded:'none'|'normal'|'quarter'|'full';
+    buttonWidth:number;
+    buttonHeight:number;
+    
+}
 
 interface State{
     activePage:number;
 }
 
-class ABPaginate extends React.Component<Props,State>{
+class Paginate extends React.Component<Props,State>{
 
     
-
     static defaultProps:Props = {
         activePage:1,
         lastPage:1,
@@ -60,11 +64,16 @@ class ABPaginate extends React.Component<Props,State>{
         showPreviousPage:true,
         showFirstPage:true,
         showLastPage:true,
-        nextPageLabel:'next >',
-        previousPageLabel:'< previous',
+        nextPageLabel:'>',
+        previousPageLabel:'<',
         firstPageLabel:'<<',
         lastPageLabel:'>>',
         breakLabel:'...',
+
+        buttonRounded:'normal',
+        buttonWidth:42,
+        buttonHeight:42,
+        
     }
 
     constructor(props:Props){
@@ -80,9 +89,34 @@ class ABPaginate extends React.Component<Props,State>{
         }
     }
 
+    getButtonsBorderRadius(){
+        switch(this.props.buttonRounded){
+            case "none":
+                return '0px';
+            case 'normal':
+                return '5px';
+            case 'quarter':
+                return '25%';
+            case 'full':
+                return '50%';
+            default:
+                return '5px';
+        }
+    }
+
+    getComputedStyle(){
+        return {
+            borderRadius:this.getButtonsBorderRadius(),
+            width:`${this.props.buttonWidth}px`,
+            height:`${this.props.buttonHeight}px`,
+            maxWidth:`${this.props.buttonWidth}px`,
+        };
+    }
+
     prev(){
         if(this.props.showPreviousPage){
             return (<li 
+                style={this.getComputedStyle()}
                 className={
                     this.props.previousClassName + ' ' 
                     + (this.props.activePage===1 && this.props.disabledPreviousClassName) 
@@ -99,9 +133,11 @@ class ABPaginate extends React.Component<Props,State>{
             return null;
         }
     }
+
     next(){
         if(this.props.showNextPage){
             return (<li 
+                style={this.getComputedStyle()}
                 className={
                     this.props.nextClassName + ' ' 
                     + (this.props.activePage===this.props.lastPage && this.props.disabledNextClassName) 
@@ -118,9 +154,11 @@ class ABPaginate extends React.Component<Props,State>{
             return null;
         }
     }
+
     first(){
         if(this.props.showFirstPage){
-            return (<li 
+            return (<li
+                style={this.getComputedStyle()} 
                 className={
                     this.props.firstClassName + ' ' 
                     + (this.props.activePage===1 && this.props.disabledFirstClassName) 
@@ -133,9 +171,12 @@ class ABPaginate extends React.Component<Props,State>{
             return null;
         }
     }
+
     last(){
+       
         if(this.props.showLastPage){
             return (<li 
+                style={this.getComputedStyle()}
                 className={
                     this.props.lastClassName + ' ' 
                     + (this.props.activePage===this.props.lastPage && this.props.disabledLastClassName) 
@@ -155,6 +196,7 @@ class ABPaginate extends React.Component<Props,State>{
 
     item(index:number,value:number){
         return (<li 
+            style={this.getComputedStyle()}
             key={index}
             onClick={()=>this.props.onChange(value)}
             className={this.props.itemClassName + ' ' + (value===this.props.activePage && this.props.activeItemClassName)}
@@ -241,6 +283,4 @@ class ABPaginate extends React.Component<Props,State>{
     }
 }
 
-
-
-export default ABPaginate;
+export default Paginate;
