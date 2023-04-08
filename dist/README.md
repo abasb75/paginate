@@ -1,9 +1,4 @@
-<img src="capture.jpg" alt="@abasb75/paginate react js paginate" title="@abasb75/paginate">
-
-
-![react js paginate](capture.jpg)
-
-
+<img src="files/screen.gif" alt="@abasb75/paginate react js paginate" title="@abasb75/paginate">
 
 add to reactjs :
 
@@ -17,6 +12,9 @@ usage example :
 
 
 ```javascript
+
+
+import {ABPaginate} from "@abasb75/paginate";
 
 import { useState } from 'react';
 
@@ -77,9 +75,10 @@ props :
 | showFirstPage | `bool` |  | `true` |  |
 | showLastPage | `bool` |  | `true` |  |
 | nextPageLabel | `string` |  | `'next >'` |  |
-| previousPageLabel | `string` |  | `'< previous'` |  |
+| previousPageLabel | `string` |  | `'<'` |  |
 | firstPageLabel | `string` |  | `'<<'` |  |
 | lastPageLabel | `string` |  | `'>>'` |  |
 | breakLabel | `string` |  | `'...'` |  |
+
 
 <!-- props-table-end -->
