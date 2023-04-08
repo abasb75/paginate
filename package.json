@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist",
     "start": "webpack serve --port 3000",
-    "release": "tsc && copy files\\package.json dist\\ && copy src\\paginate.css dist\\ && copy README.md dist\\"
+    "release": "tsc && copy files\\package.json dist\\ && copy src\\paginate.css dist\\ && copy README.md dist\\",
+    "build": "set NODE_ENV=production && webpack"
   },
   "repository": {
     "type": "git",
