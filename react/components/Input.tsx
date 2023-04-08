@@ -10,8 +10,11 @@ interface Props {
 
 const TextInput = ({value,type,onChange,label,maxLen}:Props) => {
     const setValue = (value:string) =>{
-        if(typeof type === 'number' && value !== ''){
+        if( type === 'number' && value !== ''){
             onChange(parseInt(value));
+        }else if( type === 'number' && (value === '')){
+            console.log(value)
+            onChange(1);
         }else{
             onChange(value);
         }

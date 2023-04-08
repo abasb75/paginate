@@ -1,6 +1,6 @@
 {
-  "name": "abasb75/paginate",
-  "version": "0.1.0",
+  "name": "@abasb75/paginate",
+  "version": "0.1.1",
   "description": "react js paginate",
   "main": "index.js",
   "private": false,

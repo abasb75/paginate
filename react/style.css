@@ -60,6 +60,10 @@ select{
     outline: none;
 }
 
+.input input:focus {
+    border-bottom: 2px solid #197477;
+}
+
 .input input[type=checkbox]{
     width: 20px;
     height: 20px;

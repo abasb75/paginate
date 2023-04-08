@@ -3,7 +3,8 @@ interface Page {
     value:string;
 }
 
-function getPages(lastPage:number|null):Page[] {
+function getPages(lastPage:number):Page[] {
+    if(lastPage < 1 ) return [];
     if(!lastPage) return [{key:0,value:'Page 1'}];
     const pages = new Array(lastPage).fill(undefined).map((item,index)=>{
         const key:number = index+1;

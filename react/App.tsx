@@ -37,7 +37,8 @@ const App = () => {
         {key:'full',value:'full'},
     ];
 
-    const pages = getPages(Math.ceil(lastPage));
+
+    const pages =  getPages(Math.ceil(lastPage));
     const pagesRanged = getRange(Math.ceil(lastPage/2-1));
      
     const resultCode = `<Paginate 
@@ -56,7 +57,6 @@ const App = () => {
     lastPageLabel={'${lastPageLabel}'}
     buttonRounded={'${buttonRounded}'}
  />`;
-    console.log(resultCode);
 
     return (<>
         <div className="holder">
