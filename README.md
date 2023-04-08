@@ -4,7 +4,7 @@ add to reactjs :
 
 ```sh
 
-$ npm install @abasb75/paginate --save
+npm install @abasb75/paginate --save
 
 ```
 
@@ -14,11 +14,10 @@ usage example :
 ```javascript
 
 
-import {ABPaginate} from "@abasb75/paginate";
+import Paginate from "@abasb75/paginate";
 
 import { useState } from 'react';
 
-import {ABPaginate} from "@abasb75/paginate";
 
 function App() {
 
@@ -28,7 +27,7 @@ function App() {
   return (<>
     <h1>page : {activePage}</h1>
 
-    <ABPaginate
+    <Paginate
       activePage={activePage}
       lastPage={10}
       pageRangeDisplayed={pageRangeDisplayed}
